@@ -18,8 +18,8 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn to="/" v-show="this.$route.name !== 'home'">
-        <span class="mr-2" to="/">Sign Out</span>
+      <v-btn to="/" v-show="this.$route.name !== 'home'" @click="onSignOut">
+        <span class="mr-2" >Sign Out</span>
         <v-icon>mdi-exit-to-app</v-icon>
       </v-btn>
     </v-app-bar>
@@ -32,8 +32,17 @@
 
 <script>
 
+ import { signOut } from './components/Users/auth';
+
 export default {
   name: 'App',
+
+    methods: {
+     onSignOut () {
+      signOut();
+      this.$router.push('/');
+    }
+  },
 
   data: () => ({
     //
