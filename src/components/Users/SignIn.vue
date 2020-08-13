@@ -30,9 +30,9 @@
       <v-icon>mdi-login</v-icon>
     </v-btn>
 
-     <v-btn class="mr-1">
+     <v-btn class="mr-1" to="/signup">
       SignUp
-      <v-icon>mdi-login</v-icon>
+      <v-icon>mdi-thumb-up</v-icon>
     </v-btn>
 
     </v-card-actions>

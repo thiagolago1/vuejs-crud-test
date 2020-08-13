@@ -18,7 +18,7 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn to="/" v-show="this.$route.name !== 'home'" @click="onSignOut">
+      <v-btn v-show="this.$route.name !== 'home' && this.$route.name !== 'signup'" @click="onSignOut">
         <span class="mr-2" >Sign Out</span>
         <v-icon>mdi-exit-to-app</v-icon>
       </v-btn>
