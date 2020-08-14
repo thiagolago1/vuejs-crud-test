@@ -47,7 +47,6 @@
 </template>
 
 <script>
-  // import { signUp } from './auth';
   import axios from 'axios';
 
   export default {

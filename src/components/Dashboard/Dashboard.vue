@@ -58,12 +58,12 @@ export default {
       }
     },
     watch: {
-      "getProducts": {
+      "this.getProducts": {
         deep: true,
+          handler() {
+          this.getProducts();
+        }
       }
-    },
-    created() {
-      this.getProducts();
     },
     computed: {
       ...mapState({
@@ -84,7 +84,6 @@ export default {
     },
     onClickToRemoveProduct(productId) {
       this.removeProduct(productId);
-      // this.products.splice(productId, 1);
       this.removeProductStatus = false;
       this.getProducts();
     },
