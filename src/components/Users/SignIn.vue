@@ -42,7 +42,7 @@
 </template>
 
 <script>
-  import { signIn } from './auth';
+  // import { signIn } from './auth';
 
   export default {
     data() {
@@ -53,7 +53,8 @@
     },
     methods: {
       async onSubmit () {
-        await signIn(this.email, this.password);
+        // await signIn(this.email, this.password);
+        await this.$nextTick();
         this.$router.push('/dashboard');
       }
     }

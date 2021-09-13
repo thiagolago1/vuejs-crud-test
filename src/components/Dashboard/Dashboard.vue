@@ -67,7 +67,8 @@ export default {
     },
     computed: {
       ...mapState({
-        products: state => state.products.products.data ? state.products.products.data : [],
+        // products: state => state.products.products.data ? state.products.products.data : [],
+        products: state => state.products.products.data ? state.products.products.data : [{ name: 'Product 1', _id: 1, price: 10 }, { name: 'Product 2', _id: 2, price: 100 }],
       }),
       dataProducts() {
           return this.products.filter(product => product._id == this.idProduct)[0];
